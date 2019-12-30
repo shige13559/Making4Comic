@@ -11,6 +11,9 @@ import UIKit
 class ShareViewController: UIViewController {
     
     
+    @IBOutlet weak var imageView: UIImageView!
+    
+    let images = ["pitcher"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +27,12 @@ class ShareViewController: UIViewController {
 
     @IBAction func shareButton(_ sender: UIButton) {
         
-//        //シェア用の画面作成
-//        let shareController = UIActivityViewController(activityItems: [imageView.image], applicationActivities: nil)
-//
-//
-//        //作成した画面を表示
-//        present(shareController, animated: true, completion: nil)
+        //シェア用の画面作成
+        let shareController = UIActivityViewController(activityItems: [imageView.image], applicationActivities: nil)
+
+
+        //作成した画面を表示
+        present(shareController, animated: true, completion: nil)
         
         
     }
