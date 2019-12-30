@@ -9,22 +9,40 @@
 import UIKit
 
 class ShareViewController: UIViewController {
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func shareButton(_ sender: UIButton) {
+        
+//        //シェア用の画面作成
+//        let shareController = UIActivityViewController(activityItems: [imageView.image], applicationActivities: nil)
+//
+//
+//        //作成した画面を表示
+//        present(shareController, animated: true, completion: nil)
+        
+        
     }
-    */
+    
+    
+    @IBAction func backHomeButton(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "backHome", sender: nil)
+        
+    }
+    
+    
 
 }
+
+
