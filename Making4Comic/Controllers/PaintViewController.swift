@@ -10,6 +10,8 @@ import UIKit
 
 class Canvas: UIView{
     
+    
+    
     override func draw(_ rect: CGRect) {
         
         super.draw(rect)
@@ -31,15 +33,24 @@ class Canvas: UIView{
             
         }
         
-        for (i, p) in line.enumerated(){
+        context.setStrokeColor(UIColor.black.cgColor)
+        context.setLineWidth(5)
+        context.setLineCap(.round)
+        
+        lines.forEach { (line) in
             
-            if i == 0{
-                context.move(to: p)
-            }else{
-                context.addLine(to: p)
+            for (i, p) in line.enumerated(){
+                if i == 0{
+                    context.move(to: p)
+                }else{
+                    context.addLine(to: p)
+                }
+                
             }
             
         }
+        
+        
         
         context.strokePath()
         
@@ -47,15 +58,35 @@ class Canvas: UIView{
     
     var line = [CGPoint]()
     
+    var lines = [[CGPoint]]()
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        lines.append([CGPoint]())
+    }
+    
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let point = touches.first?.location(in: nil)else{
+        guard var point = touches.first?.location(in: nil)else{
             return
         }
-        
+        print("======")
         print(point)
+        print("======")
+        
+        point.x -= 20
+        point.y -= 309
+        
+        guard var lastLine = lines.popLast() else {
+            return
+        }
+        lastLine.append(point)
+        lines.append(lastLine)
+        
+//        var lastLine = lines.last
+//        lastLine?.append(point)
         
         line.append(point)
+        
+        setNeedsDisplay()
         
     }
     
@@ -63,16 +94,19 @@ class Canvas: UIView{
 
 class PaintViewController: UIViewController {
     
+    
+    
+    @IBOutlet weak var paintView: UIView!
+    
     let canvas = Canvas()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         view.addSubview(canvas)
-        canvas.backgroundColor = .white
-        canvas.frame = view.frame
+        canvas.backgroundColor = .red
+        canvas.frame = paintView.frame
     }
     
     
