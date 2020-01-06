@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +18,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        //追加
+        setInactivityObservers()
         return true
     }
+    
+    //追加
+    func setInactivityObservers() {
+        guard let user = Auth.auth().currentUser else { return }
+
+        // get user branch of database
+        let ref = Database.database().reference()
+        let usersRef = ref.child("Users")
+        let userRef = usersRef.child(user.uid)
+
+        // set "isOnline" branch to true when app launches
+        userRef.child("isOnline").setValue(true)
+
+        // set value to false when user terminates app
+        userRef.child("isOnline").onDisconnectSetValue(false)
+    }
+    
 
     // MARK: UISceneSession Lifecycle
 

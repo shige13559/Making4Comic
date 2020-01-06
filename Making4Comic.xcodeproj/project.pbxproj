@@ -18,9 +18,14 @@
 		B5E33E0B23B8F61000DA78B8 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E33E0A23B8F61000DA78B8 /* ShareViewController.swift */; };
 		B5E33E0F23BF3AE300DA78B8 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E33E0E23BF3AE200DA78B8 /* ExampleViewController.swift */; };
 		B5E33E1123BF3E5A00DA78B8 /* example.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E33E1023BF3E5A00DA78B8 /* example.swift */; };
+		B5E33E1323C301B500DA78B8 /* ExampleLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E33E1223C301B500DA78B8 /* ExampleLoginViewController.swift */; };
+		B5E33E1523C30F9300DA78B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5E33E1423C30F9300DA78B8 /* GoogleService-Info.plist */; };
+		E898EB56767CEE2F087D56C0 /* Pods_Making4Comic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAE46612F4FCA82AA6324A2 /* Pods_Making4Comic.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AAE46612F4FCA82AA6324A2 /* Pods_Making4Comic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Making4Comic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		686551BD3B35D23FBA1351B9 /* Pods-Making4Comic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Making4Comic.release.xcconfig"; path = "Target Support Files/Pods-Making4Comic/Pods-Making4Comic.release.xcconfig"; sourceTree = "<group>"; };
 		B5E33DEC23B8F57600DA78B8 /* Making4Comic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Making4Comic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E33DEF23B8F57600DA78B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5E33DF123B8F57600DA78B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +39,9 @@
 		B5E33E0A23B8F61000DA78B8 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		B5E33E0E23BF3AE200DA78B8 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		B5E33E1023BF3E5A00DA78B8 /* example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = example.swift; sourceTree = "<group>"; };
+		B5E33E1223C301B500DA78B8 /* ExampleLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleLoginViewController.swift; sourceTree = "<group>"; };
+		B5E33E1423C30F9300DA78B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		EEFAB0277C9A64300FC2F0C2 /* Pods-Making4Comic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Making4Comic.debug.xcconfig"; path = "Target Support Files/Pods-Making4Comic/Pods-Making4Comic.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +49,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E898EB56767CEE2F087D56C0 /* Pods_Making4Comic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3826DF4444054132E502D859 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EEFAB0277C9A64300FC2F0C2 /* Pods-Making4Comic.debug.xcconfig */,
+				686551BD3B35D23FBA1351B9 /* Pods-Making4Comic.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		510D5580650A56F700420377 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AAE46612F4FCA82AA6324A2 /* Pods_Making4Comic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B5E33DE323B8F57600DA78B8 = {
 			isa = PBXGroup;
 			children = (
 				B5E33DEE23B8F57600DA78B8 /* Making4Comic */,
 				B5E33DED23B8F57600DA78B8 /* Products */,
+				3826DF4444054132E502D859 /* Pods */,
+				510D5580650A56F700420377 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +102,7 @@
 				B5E33DF823B8F57A00DA78B8 /* Assets.xcassets */,
 				B5E33DFA23B8F57A00DA78B8 /* LaunchScreen.storyboard */,
 				B5E33DFD23B8F57A00DA78B8 /* Info.plist */,
+				B5E33E1423C30F9300DA78B8 /* GoogleService-Info.plist */,
 				B5E33E1023BF3E5A00DA78B8 /* example.swift */,
 			);
 			path = Making4Comic;
@@ -86,6 +116,7 @@
 				B5E33E0823B8F60000DA78B8 /* ResultViewController.swift */,
 				B5E33E0A23B8F61000DA78B8 /* ShareViewController.swift */,
 				B5E33E0E23BF3AE200DA78B8 /* ExampleViewController.swift */,
+				B5E33E1223C301B500DA78B8 /* ExampleLoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -97,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5E33E0023B8F57A00DA78B8 /* Build configuration list for PBXNativeTarget "Making4Comic" */;
 			buildPhases = (
+				B9602EF79028EBDE321D53A5 /* [CP] Check Pods Manifest.lock */,
 				B5E33DE823B8F57600DA78B8 /* Sources */,
 				B5E33DE923B8F57600DA78B8 /* Frameworks */,
 				B5E33DEA23B8F57600DA78B8 /* Resources */,
+				CC62EADAFEF5F3B33A030D3C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,12 +182,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5E33DFC23B8F57A00DA78B8 /* LaunchScreen.storyboard in Resources */,
+				B5E33E1523C30F9300DA78B8 /* GoogleService-Info.plist in Resources */,
 				B5E33DF923B8F57A00DA78B8 /* Assets.xcassets in Resources */,
 				B5E33DF723B8F57600DA78B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B9602EF79028EBDE321D53A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Making4Comic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC62EADAFEF5F3B33A030D3C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Making4Comic/Pods-Making4Comic-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Making4Comic/Pods-Making4Comic-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Making4Comic/Pods-Making4Comic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B5E33DE823B8F57600DA78B8 /* Sources */ = {
@@ -165,6 +241,7 @@
 				B5E33DF023B8F57600DA78B8 /* AppDelegate.swift in Sources */,
 				B5E33DF223B8F57600DA78B8 /* SceneDelegate.swift in Sources */,
 				B5E33E0523B8F5BB00DA78B8 /* PaintViewController.swift in Sources */,
+				B5E33E1323C301B500DA78B8 /* ExampleLoginViewController.swift in Sources */,
 				B5E33E1123BF3E5A00DA78B8 /* example.swift in Sources */,
 				B5E33E0F23BF3AE300DA78B8 /* ExampleViewController.swift in Sources */,
 				B5E33E0723B8F5D500DA78B8 /* MainViewController.swift in Sources */,
@@ -310,6 +387,7 @@
 		};
 		B5E33E0123B8F57A00DA78B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEFAB0277C9A64300FC2F0C2 /* Pods-Making4Comic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -328,6 +406,7 @@
 		};
 		B5E33E0223B8F57A00DA78B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 686551BD3B35D23FBA1351B9 /* Pods-Making4Comic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
