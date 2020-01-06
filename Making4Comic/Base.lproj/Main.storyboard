@@ -263,20 +263,39 @@
             </objects>
             <point key="canvasLocation" x="992.75362318840587" y="-779.46428571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--Example View Controller-->
         <scene sceneID="hRJ-E7-SSR">
             <objects>
-                <viewController id="jgK-Ic-pWN" customClass="ViewController" customModule="Making4Comic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jgK-Ic-pWN" customClass="ExampleViewController" customModule="Making4Comic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0tM-XQ-ulb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umD-U3-pUH">
+                                <rect key="frame" x="20" y="227" width="165" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqj-CW-9vf">
+                                <rect key="frame" x="51" y="44" width="312" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="gJH-ah-DPQ"/>
                     </view>
+                    <connections>
+                        <outlet property="countLabel" destination="bqj-CW-9vf" id="395-dZ-pO8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RhT-av-dHn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3480" y="117"/>
+            <point key="canvasLocation" x="3479.7101449275365" y="116.51785714285714"/>
         </scene>
     </scenes>
     <resources>

@@ -16,6 +16,8 @@
 		B5E33E0723B8F5D500DA78B8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E33E0623B8F5D500DA78B8 /* MainViewController.swift */; };
 		B5E33E0923B8F60000DA78B8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E33E0823B8F60000DA78B8 /* ResultViewController.swift */; };
 		B5E33E0B23B8F61000DA78B8 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E33E0A23B8F61000DA78B8 /* ShareViewController.swift */; };
+		B5E33E0F23BF3AE300DA78B8 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E33E0E23BF3AE200DA78B8 /* ExampleViewController.swift */; };
+		B5E33E1123BF3E5A00DA78B8 /* example.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E33E1023BF3E5A00DA78B8 /* example.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		B5E33E0623B8F5D500DA78B8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B5E33E0823B8F60000DA78B8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		B5E33E0A23B8F61000DA78B8 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		B5E33E0E23BF3AE200DA78B8 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		B5E33E1023BF3E5A00DA78B8 /* example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = example.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 				B5E33DF823B8F57A00DA78B8 /* Assets.xcassets */,
 				B5E33DFA23B8F57A00DA78B8 /* LaunchScreen.storyboard */,
 				B5E33DFD23B8F57A00DA78B8 /* Info.plist */,
+				B5E33E1023BF3E5A00DA78B8 /* example.swift */,
 			);
 			path = Making4Comic;
 			sourceTree = "<group>";
@@ -80,6 +85,7 @@
 				B5E33E0623B8F5D500DA78B8 /* MainViewController.swift */,
 				B5E33E0823B8F60000DA78B8 /* ResultViewController.swift */,
 				B5E33E0A23B8F61000DA78B8 /* ShareViewController.swift */,
+				B5E33E0E23BF3AE200DA78B8 /* ExampleViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -159,6 +165,8 @@
 				B5E33DF023B8F57600DA78B8 /* AppDelegate.swift in Sources */,
 				B5E33DF223B8F57600DA78B8 /* SceneDelegate.swift in Sources */,
 				B5E33E0523B8F5BB00DA78B8 /* PaintViewController.swift in Sources */,
+				B5E33E1123BF3E5A00DA78B8 /* example.swift in Sources */,
+				B5E33E0F23BF3AE300DA78B8 /* ExampleViewController.swift in Sources */,
 				B5E33E0723B8F5D500DA78B8 /* MainViewController.swift in Sources */,
 				B5E33E0923B8F60000DA78B8 /* ResultViewController.swift in Sources */,
 			);
