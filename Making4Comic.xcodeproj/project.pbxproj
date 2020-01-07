@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -62,7 +62,6 @@
 				EEFAB0277C9A64300FC2F0C2 /* Pods-Making4Comic.debug.xcconfig */,
 				686551BD3B35D23FBA1351B9 /* Pods-Making4Comic.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

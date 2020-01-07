@@ -10,18 +10,22 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseDatabase
+import FirebaseCore
 
 class ExampleLoginViewController: UIViewController {
     
-    var databaseRef: DatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        databaseRef = Database.database().reference()
-        Database.database().isPersistenceEnabled = true
+        //追加
+//        databaseRef = Database.database().reference()
+        //追加
+//        Database.database().isPersistenceEnabled = true
+        
+        
     }
     
     
@@ -35,6 +39,44 @@ class ExampleLoginViewController: UIViewController {
             
         }
     }
+    
+    
+    @IBAction func didClickButton(_ sender: UIButton) {
+        
+        
+        let db = Firestore.firestore()
+        db.collection("users").document(Auth.auth().currentUser!.uid).setData([
+            "id": Auth.auth().currentUser?.uid,
+            "lastDataTime": FieldValue.serverTimestamp(), //作成日時
+            "online": true
+        ]) {error in
+            if let err = error{
+                print(err.localizedDescription)
+            }
+        }
+        
+    }
+    
+    
+    @IBAction func logout(_ sender: UIButton) {
+        
+        let db = Firestore.firestore()
+        db.collection("users").document(Auth.auth().currentUser!.uid).setData([
+            "id": Auth.auth().currentUser?.uid,
+            "lastDataTime": FieldValue.serverTimestamp(), //作成日時
+            "online": false
+        ]) {error in
+            if let err = error{
+                print(err.localizedDescription)
+            }
+        }
+        
+        
+        
+        
+        
+    }
+    
     
     
 
