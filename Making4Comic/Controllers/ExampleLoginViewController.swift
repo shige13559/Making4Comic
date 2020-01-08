@@ -14,16 +14,13 @@ import FirebaseCore
 
 class ExampleLoginViewController: UIViewController {
     
+    var arr = ["user1", "user2", "user3", "user4"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        //追加
-//        databaseRef = Database.database().reference()
-        //追加
-//        Database.database().isPersistenceEnabled = true
         
         
     }
@@ -70,10 +67,6 @@ class ExampleLoginViewController: UIViewController {
                 print(err.localizedDescription)
             }
         }
-        
-        
-        
-        
         
     }
     
