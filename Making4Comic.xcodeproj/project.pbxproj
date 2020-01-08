@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5CDD91A23C5BBCD00106A33 /* ExampleTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CDD91923C5BBCD00106A33 /* ExampleTimerViewController.swift */; };
 		B5E33DF023B8F57600DA78B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E33DEF23B8F57600DA78B8 /* AppDelegate.swift */; };
 		B5E33DF223B8F57600DA78B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E33DF123B8F57600DA78B8 /* SceneDelegate.swift */; };
 		B5E33DF723B8F57600DA78B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E33DF523B8F57600DA78B8 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B5CDD91923C5BBCD00106A33 /* ExampleTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTimerViewController.swift; sourceTree = "<group>"; };
 		B5E33DEC23B8F57600DA78B8 /* Making4Comic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Making4Comic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E33DEF23B8F57600DA78B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5E33DF123B8F57600DA78B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				B5E33E0623B8F5D500DA78B8 /* MainViewController.swift */,
 				B5E33E0823B8F60000DA78B8 /* ResultViewController.swift */,
 				B5E33E0A23B8F61000DA78B8 /* ShareViewController.swift */,
+				B5CDD91923C5BBCD00106A33 /* ExampleTimerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				B5E33DF223B8F57600DA78B8 /* SceneDelegate.swift in Sources */,
 				B5E33E0523B8F5BB00DA78B8 /* PaintViewController.swift in Sources */,
 				B5E33E0723B8F5D500DA78B8 /* MainViewController.swift in Sources */,
+				B5CDD91A23C5BBCD00106A33 /* ExampleTimerViewController.swift in Sources */,
 				B5E33E0923B8F60000DA78B8 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aje-cz-N6I">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jgK-Ic-pWN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -263,20 +263,32 @@
             </objects>
             <point key="canvasLocation" x="992.75362318840587" y="-779.46428571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--Example Timer View Controller-->
         <scene sceneID="hRJ-E7-SSR">
             <objects>
-                <viewController id="jgK-Ic-pWN" customClass="ViewController" customModule="Making4Comic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jgK-Ic-pWN" customClass="ExampleTimerViewController" customModule="Making4Comic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0tM-XQ-ulb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CJ-Hc-rRe">
+                                <rect key="frame" x="20" y="148" width="374" height="296"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="gJH-ah-DPQ"/>
                     </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="7CJ-Hc-rRe" id="3V4-GH-6Z0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RhT-av-dHn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3480" y="117"/>
+            <point key="canvasLocation" x="3479.7101449275365" y="116.51785714285714"/>
         </scene>
     </scenes>
     <resources>
