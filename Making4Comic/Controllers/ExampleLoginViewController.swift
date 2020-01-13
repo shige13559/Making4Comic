@@ -14,7 +14,7 @@ import FirebaseCore
 
 class ExampleLoginViewController: UIViewController {
     
-    var arr = ["user1", "user2", "user3", "user4"]
+    var num:Int! = 0
     
 
     override func viewDidLoad() {
@@ -67,6 +67,74 @@ class ExampleLoginViewController: UIViewController {
                 print(err.localizedDescription)
             }
         }
+        
+    }
+    
+    
+    @IBAction func practice(_ sender: UIButton) {
+        
+        let db = Firestore.firestore()
+
+        db.collection("rooms").whereField("status", isEqualTo: false).getDocuments { (querySnapshot, error) in
+
+            guard var documents = querySnapshot?.documents else{
+                return
+            }
+
+
+            if documents.isEmpty {
+                // 0件だったりした時の処理
+                db.collection("rooms").addDocument(data: [
+                    "users": [Auth.auth().currentUser?.uid],
+                    "status": false
+                ])
+
+            }else{
+                let document = documents[0]
+                let users = document.get("users") as! [String]
+                users.count
+                print(users)
+
+                db.collection("rooms").document(document.documentID).setData([
+
+                    "users": [Auth.auth().currentUser?.uid],
+                    "status": true
+                ])
+
+            }
+        }
+        
+        
+    }
+
+    
+    
+    @IBAction func count(_ sender: UIButton) {
+        
+        let  db = Firestore.firestore()
+        
+        
+        db.collection("rooms").getDocuments()
+        {
+            (querySnapshot, err) in
+
+            if let err = err
+            {
+                print("Error getting documents: \(err)");
+            }
+            else
+            {
+                var count = 0
+                for document in querySnapshot!.documents {
+                    count += 1
+                    print("\(document.documentID) => \(document.data())");
+                }
+
+                print("Count = \(count)");
+            }
+        }
+        
+        
         
     }
     
