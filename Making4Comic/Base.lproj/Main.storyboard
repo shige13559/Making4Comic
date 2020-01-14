@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VQr-sU-2l5">
+
+
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
 
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VQr-sU-2l5">
+
 
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
@@ -107,13 +111,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="消しゴム"/>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="paintView" translatesAutoresizingMaskIntoConstraints="NO" id="nZm-Jn-O1b">
+                                <rect key="frame" x="20" y="200" width="374" height="494"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="制限時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0J-eN-jUE">
-                                <rect key="frame" x="20" y="268" width="110" height="33"/>
+                                <rect key="frame" x="20" y="159" width="110" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+
                             <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="paintView" translatesAutoresizingMaskIntoConstraints="NO" id="nZm-Jn-O1b">
                                 <rect key="frame" x="20" y="309" width="374" height="385"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -134,6 +144,7 @@
                                     <action selector="didClickButton:" destination="aje-cz-N6I" eventType="touchUpInside" id="Y0o-FJ-fD3"/>
                                 </connections>
                             </button>
+
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="bAK-r8-Ihs"/>
@@ -210,6 +221,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jzw-aK-SCE" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1835" y="-717"/>
+        </scene>
+        <!--Example Login View Controller-->
+        <scene sceneID="aRV-pN-68i">
+            <objects>
+                <viewController id="hck-JU-4Ja" customClass="ExampleLoginViewController" customModule="Making4Comic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Pz-RR-pvr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRm-Gx-ZI7">
+                                <rect key="frame" x="20" y="141" width="147" height="146"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="start"/>
+                                <connections>
+                                    <action selector="doAnonymousLogin:" destination="hck-JU-4Ja" eventType="touchUpInside" id="6vc-Ne-uq6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hT3-HC-fIP">
+                                <rect key="frame" x="70" y="456" width="87" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="マッチングx"/>
+                                <connections>
+                                    <action selector="didClickButton:" destination="hck-JU-4Ja" eventType="touchUpInside" id="ANt-MJ-3av"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8p-NH-X7K">
+                                <rect key="frame" x="263" y="492" width="90" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="キャンセルx"/>
+                                <connections>
+                                    <action selector="logout:" destination="hck-JU-4Ja" eventType="touchUpInside" id="sDv-NO-IZu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNv-Qr-Aae">
+                                <rect key="frame" x="263" y="199" width="131" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="try"/>
+                                <connections>
+                                    <action selector="practice:" destination="hck-JU-4Ja" eventType="touchUpInside" id="5eM-Jk-xF0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUA-ny-YEX">
+                                <rect key="frame" x="168" y="663" width="90" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="count"/>
+                                <connections>
+                                    <action selector="count:" destination="hck-JU-4Ja" eventType="touchUpInside" id="Z6r-1v-R2M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2gn-rD-lZD"/>
+                    </view>
+                    <connections>
+                        <segue destination="zRA-aI-Wvl" kind="show" identifier="nextViewController" id="j1c-Og-LFC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UEe-Qr-r9Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3479.7101449275365" y="-706.47321428571422"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hLJ-q4-YMN">
+            <objects>
+                <viewController id="zRA-aI-Wvl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eLh-GS-O8f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="eTv-uL-6zS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="M5p-df-roC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Xc-Ev-Jgs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4490" y="-709"/>
         </scene>
         <!--Share View Controller-->
         <scene sceneID="xyJ-UW-Z6f">
@@ -290,6 +377,7 @@
             </objects>
             <point key="canvasLocation" x="992.75362318840587" y="-779.46428571428567"/>
         </scene>
+
         <!--View Controller-->
         <scene sceneID="hRJ-E7-SSR">
             <objects>
@@ -470,6 +558,7 @@
             </objects>
             <point key="canvasLocation" x="4514" y="117"/>
         </scene>
+
     </scenes>
     <resources>
         <image name="pitcher" width="640" height="480"/>
