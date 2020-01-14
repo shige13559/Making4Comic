@@ -7,16 +7,28 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    //
+    var deiceToken:String?
+    var roomId:String?
+    var newRoomId:String?
+    var targetId:String?
+    var chatStartFlg:Bool?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
         return true
     }
+    
+    
 
     // MARK: UISceneSession Lifecycle
 

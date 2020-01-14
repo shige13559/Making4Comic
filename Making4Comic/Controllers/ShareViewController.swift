@@ -13,26 +13,36 @@ class ShareViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
+
+    var text = String()
     
+    @IBOutlet weak var label: UILabel!
+    
+    
+    let images = ["pitcher"]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        
+        label.text = text
         
     }
     
 
     @IBAction func shareButton(_ sender: UIButton) {
         
-//        //シェア用の画面作成
-//        let shareController = UIActivityViewController(activityItems: [imageView.image], applicationActivities: nil)
+
+        //シェア用の画面作成
+        let shareController = UIActivityViewController(activityItems: [imageView.image], applicationActivities: nil)
 
 
-//        //作成した画面を表示
-//        present(shareController, animated: true, completion: nil)
+        //作成した画面を表示
+        present(shareController, animated: true, completion: nil)
+
+
         
         
         
@@ -64,6 +74,8 @@ class ShareViewController: UIViewController {
         self.present(activityVC, animated: true, completion: nil)
         
         
+        
+        
     }
     
     
@@ -77,7 +89,6 @@ class ShareViewController: UIViewController {
     
     
     
-
 }
 
 
