@@ -6,10 +6,12 @@ target 'Making4Comic' do
   use_frameworks!
 
   # Pods for Making4Comic
+
 pod 'Firebase/Analytics'
 pod 'Firebase/Database'
 pod 'Firebase/Auth'
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
+
 
 end

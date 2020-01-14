@@ -9,6 +9,8 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    var text = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +19,17 @@ class MainViewController: UIViewController {
     }
     
 
+
+    
+
+
+    
+    @IBAction func didClickButton(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "make", sender: nil)
+        
+    }
+    
     
 
 }

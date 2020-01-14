@@ -1,14 +1,14 @@
 //
-//  PaintViewController.swift
+//  Paint2ViewController.swift
 //  Making4Comic
 //
-//  Created by 原田茂大 on 2019/12/29.
-//  Copyright © 2019 geshi. All rights reserved.
+//  Created by 原田茂大 on 2020/01/14.
+//  Copyright © 2020 geshi. All rights reserved.
 //
 
 import UIKit
 
-class Canvas: UIView{
+class Canvas2: UIView{
     
     
     
@@ -94,17 +94,16 @@ class Canvas: UIView{
     
 }
 
-class PaintViewController: UIViewController {
+class Paint2ViewController: UIViewController {
     
     var text = String()
-    
     
     
     @IBOutlet weak var label: UILabel!
     
     @IBOutlet weak var paintView: UIView!
     
-    let canvas = Canvas()
+    let canvas = Canvas2()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,9 +128,8 @@ class PaintViewController: UIViewController {
         
     }
     
-    
     @IBAction func didClickButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "toNext2", sender: nil)
+        performSegue(withIdentifier: "toNext3", sender: nil)
     }
     
     func handOver(_ word:String) {
@@ -139,8 +137,8 @@ class PaintViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toNext2" {
-            let svc = segue.destination as! Paint2ViewController
+        if segue.identifier == "toNext3" {
+            let svc = segue.destination as! Paint3ViewController
             svc.text = label.text!
         }
     }
@@ -152,3 +150,4 @@ class PaintViewController: UIViewController {
     
 
 }
+
