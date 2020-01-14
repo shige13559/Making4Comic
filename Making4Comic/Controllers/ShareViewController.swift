@@ -35,6 +35,8 @@ class ShareViewController: UIViewController {
 //        present(shareController, animated: true, completion: nil)
         
         
+        
+        
         // キャプチャしたい枠を決める
         let rect = view.bounds
         
