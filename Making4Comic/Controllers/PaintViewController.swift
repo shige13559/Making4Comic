@@ -72,8 +72,10 @@ class Canvas: UIView{
         print(point)
         print("======")
         
-        point.x -= 20
-        point.y -= 309
+        print(self.frame.minX)
+        
+        point.x -= self.frame.minX
+        point.y -= self.frame.minY
         
         guard var lastLine = lines.popLast() else {
             return
@@ -105,9 +107,17 @@ class PaintViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         view.addSubview(canvas)
-        canvas.backgroundColor = .red
+//        canvas.backgroundColor = .white
         canvas.frame = paintView.frame
+        
+        // 枠のカラー
+        paintView.layer.borderColor = UIColor.black.cgColor
+        
+        // 枠の幅
+        paintView.layer.borderWidth = 5.0
     }
+    
+    
     
     
     
