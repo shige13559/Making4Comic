@@ -40,6 +40,7 @@ class ShareViewController: UIViewController {
         // キャプチャしたい枠を決める
         let rect = view.bounds
         
+        
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
         
         // ここでtrueを指定しないと、画面が変わった時に再キャプチャできない
