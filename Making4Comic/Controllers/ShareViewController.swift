@@ -45,8 +45,11 @@ class ShareViewController: UIViewController {
 
         
         
+        
+        
         // キャプチャしたい枠を決める
         let rect = view.bounds
+        
         
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
         
