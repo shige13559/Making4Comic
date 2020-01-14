@@ -96,7 +96,10 @@ class Canvas: UIView{
 
 class PaintViewController: UIViewController {
     
+    var text = String()
     
+    
+    @IBOutlet weak var label: UILabel!
     
     @IBOutlet weak var paintView: UIView!
     
@@ -107,14 +110,22 @@ class PaintViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         view.addSubview(canvas)
-//        canvas.backgroundColor = .white
+        canvas.backgroundColor = .red
         canvas.frame = paintView.frame
         
-        // 枠のカラー
-        paintView.layer.borderColor = UIColor.black.cgColor
+//        // 枠のカラー
+//        paintView.layer.borderColor = UIColor.black.cgColor
+//
+//        // 枠の幅
+//        paintView.layer.borderWidth = 5.0
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        // 枠の幅
-        paintView.layer.borderWidth = 5.0
+        //受け取った値を代入
+        label.text = text
+        
     }
     
     
