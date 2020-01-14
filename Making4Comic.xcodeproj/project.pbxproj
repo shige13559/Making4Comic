@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B526DEA123CD8C6F00BF8E91 /* PrepareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526DEA023CD8C6F00BF8E91 /* PrepareViewController.swift */; };
+		B526DEA323CDA25800BF8E91 /* Paint2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526DEA223CDA25800BF8E91 /* Paint2ViewController.swift */; };
+		B526DEA523CDA26B00BF8E91 /* Paint3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526DEA423CDA26B00BF8E91 /* Paint3ViewController.swift */; };
+		B526DEA723CDA28000BF8E91 /* Paint4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526DEA623CDA28000BF8E91 /* Paint4ViewController.swift */; };
 		B5E33DF023B8F57600DA78B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E33DEF23B8F57600DA78B8 /* AppDelegate.swift */; };
 		B5E33DF223B8F57600DA78B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E33DF123B8F57600DA78B8 /* SceneDelegate.swift */; };
 		B5E33DF723B8F57600DA78B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E33DF523B8F57600DA78B8 /* Main.storyboard */; };
@@ -21,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		B526DEA023CD8C6F00BF8E91 /* PrepareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareViewController.swift; sourceTree = "<group>"; };
+		B526DEA223CDA25800BF8E91 /* Paint2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paint2ViewController.swift; sourceTree = "<group>"; };
+		B526DEA423CDA26B00BF8E91 /* Paint3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paint3ViewController.swift; sourceTree = "<group>"; };
+		B526DEA623CDA28000BF8E91 /* Paint4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paint4ViewController.swift; sourceTree = "<group>"; };
 		B5E33DEC23B8F57600DA78B8 /* Making4Comic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Making4Comic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E33DEF23B8F57600DA78B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5E33DF123B8F57600DA78B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,11 +84,14 @@
 		B5E33E0323B8F59400DA78B8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B526DEA023CD8C6F00BF8E91 /* PrepareViewController.swift */,
 				B5E33E0423B8F5BB00DA78B8 /* PaintViewController.swift */,
+				B526DEA223CDA25800BF8E91 /* Paint2ViewController.swift */,
+				B526DEA423CDA26B00BF8E91 /* Paint3ViewController.swift */,
+				B526DEA623CDA28000BF8E91 /* Paint4ViewController.swift */,
 				B5E33E0623B8F5D500DA78B8 /* MainViewController.swift */,
 				B5E33E0823B8F60000DA78B8 /* ResultViewController.swift */,
 				B5E33E0A23B8F61000DA78B8 /* ShareViewController.swift */,
-				B526DEA023CD8C6F00BF8E91 /* PrepareViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -160,9 +169,12 @@
 			files = (
 				B526DEA123CD8C6F00BF8E91 /* PrepareViewController.swift in Sources */,
 				B5E33E0B23B8F61000DA78B8 /* ShareViewController.swift in Sources */,
+				B526DEA323CDA25800BF8E91 /* Paint2ViewController.swift in Sources */,
 				B5E33DF023B8F57600DA78B8 /* AppDelegate.swift in Sources */,
 				B5E33DF223B8F57600DA78B8 /* SceneDelegate.swift in Sources */,
 				B5E33E0523B8F5BB00DA78B8 /* PaintViewController.swift in Sources */,
+				B526DEA723CDA28000BF8E91 /* Paint4ViewController.swift in Sources */,
+				B526DEA523CDA26B00BF8E91 /* Paint3ViewController.swift in Sources */,
 				B5E33E0723B8F5D500DA78B8 /* MainViewController.swift in Sources */,
 				B5E33E0923B8F60000DA78B8 /* ResultViewController.swift in Sources */,
 			);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uhI-QY-DO6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -20,6 +20,10 @@
                                 <rect key="frame" x="118" y="470" width="166" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="作成"/>
+                                <connections>
+                                    <action selector="didClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8gT-oQ-SBV"/>
+                                    <segue destination="uhI-QY-DO6" kind="modal" identifier="make" modalPresentationStyle="fullScreen" id="BC8-j4-ig2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDr-CI-drJ">
                                 <rect key="frame" x="124" y="606" width="166" height="128"/>
@@ -81,6 +85,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xaS-55-acp"/>
                     </view>
+                    <navigationItem key="navigationItem" id="N0z-tk-67D"/>
                     <connections>
                         <outlet property="textField" destination="4kc-Sd-5pG" id="qbR-NM-28Z"/>
                         <segue destination="aje-cz-N6I" kind="modal" identifier="toNext" modalPresentationStyle="fullScreen" id="rMh-99-uHs"/>
@@ -98,11 +103,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRK-AE-pXI">
-                                <rect key="frame" x="291" y="702" width="103" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Finish"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zT-Tk-4zj">
                                 <rect key="frame" x="14" y="702" width="103" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -127,15 +127,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRK-AE-pXI">
+                                <rect key="frame" x="111" y="117" width="103" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="次の人へ"/>
+                                <connections>
+                                    <action selector="didClickButton:" destination="aje-cz-N6I" eventType="touchUpInside" id="Y0o-FJ-fD3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="bAK-r8-Ihs"/>
                     </view>
                     <navigationItem key="navigationItem" id="P3x-VP-ZsT"/>
                     <connections>
-                        <outlet property="label" destination="ueB-5O-RJk" id="sOg-oR-lBi"/>
+                        <outlet property="label" destination="ueB-5O-RJk" id="Hzv-Q4-5xS"/>
                         <outlet property="paintView" destination="nZm-Jn-O1b" id="UGE-Xw-rmZ"/>
-                        <segue destination="zUx-Vm-oqG" kind="show" identifier="toNext" id="lju-Ez-f7U"/>
+                        <segue destination="zUx-Vm-oqG" kind="modal" identifier="toNext2" modalPresentationStyle="fullScreen" id="Pji-PB-zXU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e33-DW-ksz" sceneMemberID="firstResponder"/>
@@ -268,6 +276,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6gH-Ou-WTL"/>
                     </view>
+                    <navigationItem key="navigationItem" id="SIs-vG-F5V"/>
                     <connections>
                         <outlet property="imageView" destination="l4P-yo-zwW" id="nda-oa-IcV"/>
                         <segue destination="BYZ-38-t0r" kind="modal" identifier="backHome" modalPresentationStyle="fullScreen" id="S4O-xO-lZM"/>
@@ -292,19 +301,14 @@
             </objects>
             <point key="canvasLocation" x="3748" y="-820"/>
         </scene>
-        <!--Paint View Controller-->
+        <!--Paint2 View Controller-->
         <scene sceneID="nw4-wF-hJf">
             <objects>
-                <viewController id="zUx-Vm-oqG" customClass="PaintViewController" customModule="Making4Comic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zUx-Vm-oqG" customClass="Paint2ViewController" customModule="Making4Comic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kzt-VC-6cQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocN-WX-RxN">
-                                <rect key="frame" x="291" y="702" width="103" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Finish"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWX-DV-Fcd">
                                 <rect key="frame" x="14" y="702" width="103" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -329,32 +333,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocN-WX-RxN">
+                                <rect key="frame" x="77" y="137" width="103" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Finish"/>
+                                <connections>
+                                    <action selector="didClickButton:" destination="zUx-Vm-oqG" eventType="touchUpInside" id="aJT-h1-hKI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="U95-XN-y4r"/>
                     </view>
                     <navigationItem key="navigationItem" id="E7o-Xm-Y6L"/>
                     <connections>
+                        <outlet property="label" destination="hzH-Sp-WOC" id="1Qe-Bb-Itx"/>
                         <outlet property="paintView" destination="Szt-gt-fx3" id="EDI-Ox-BlK"/>
+                        <segue destination="fxA-5b-Kzi" kind="modal" identifier="toNext3" modalPresentationStyle="fullScreen" id="PSk-24-dRo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sTd-fb-UoG" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2916" y="117"/>
         </scene>
-        <!--Paint View Controller-->
+        <!--Paint3 View Controller-->
         <scene sceneID="VO6-dl-Tvu">
             <objects>
-                <viewController id="fxA-5b-Kzi" customClass="PaintViewController" customModule="Making4Comic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fxA-5b-Kzi" customClass="Paint3ViewController" customModule="Making4Comic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mm9-Ek-N4t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw7-T7-RQL">
-                                <rect key="frame" x="291" y="702" width="103" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Finish"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VD8-aq-7vg">
                                 <rect key="frame" x="14" y="702" width="103" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -379,31 +388,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw7-T7-RQL">
+                                <rect key="frame" x="75" y="137" width="103" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Finish"/>
+                                <connections>
+                                    <action selector="didClickButton:" destination="fxA-5b-Kzi" eventType="touchUpInside" id="psv-O4-Vz2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="x9Y-Ye-ZS9"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6qV-fX-fbx"/>
                     <connections>
+                        <outlet property="label" destination="zvY-i7-EBj" id="j58-g1-haL"/>
                         <outlet property="paintView" destination="qBG-HD-9Yf" id="12Y-B0-M5M"/>
+                        <segue destination="891-ya-Afy" kind="modal" identifier="toNext4" modalPresentationStyle="fullScreen" id="AQJ-es-OwG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bjc-HU-54M" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3748" y="117"/>
         </scene>
-        <!--Paint View Controller-->
+        <!--Paint4 View Controller-->
         <scene sceneID="E3O-YV-bWY">
             <objects>
-                <viewController id="891-ya-Afy" customClass="PaintViewController" customModule="Making4Comic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="891-ya-Afy" customClass="Paint4ViewController" customModule="Making4Comic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hoi-6e-iuO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r85-Nw-ood">
-                                <rect key="frame" x="291" y="702" width="103" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Finish"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEy-bK-mU3">
                                 <rect key="frame" x="14" y="702" width="103" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -428,12 +443,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r85-Nw-ood">
+                                <rect key="frame" x="70" y="137" width="103" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Finish"/>
+                                <connections>
+                                    <action selector="didClickButton:" destination="891-ya-Afy" eventType="touchUpInside" id="adb-yz-gsp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="iNN-tg-Sda"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xOh-OH-sXR"/>
                     <connections>
+                        <outlet property="label" destination="NaI-Hz-Nxe" id="joh-pu-wN8"/>
                         <outlet property="paintView" destination="5I5-5s-UCx" id="A2D-Jh-gkn"/>
+                        <segue destination="VQr-sU-2l5" kind="modal" identifier="share" modalPresentationStyle="fullScreen" id="3oR-95-8tx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Np-cf-bkj" sceneMemberID="firstResponder"/>
