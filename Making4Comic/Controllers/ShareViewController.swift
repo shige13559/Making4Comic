@@ -13,6 +13,11 @@ class ShareViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    var text = String()
+    
+    @IBOutlet weak var label: UILabel!
+    
+    
     let images = ["pitcher"]
     
     override func viewDidLoad() {
@@ -20,7 +25,7 @@ class ShareViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        
+        label.text = text
         
     }
     
@@ -43,6 +48,10 @@ class ShareViewController: UIViewController {
         performSegue(withIdentifier: "backHome", sender: nil)
         
     }
+    
+    
+    
+    
     
     
 

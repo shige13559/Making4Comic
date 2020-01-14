@@ -103,7 +103,7 @@ class Paint2ViewController: UIViewController {
     
     @IBOutlet weak var paintView: UIView!
     
-    let canvas = Canvas()
+    let canvas = Canvas2()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -137,7 +137,7 @@ class Paint2ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toNext2" {
+        if segue.identifier == "toNext3" {
             let svc = segue.destination as! Paint3ViewController
             svc.text = label.text!
         }
